@@ -35,6 +35,29 @@ void input()
 
 }
 
+    void bubbleShortAlgorithm() 
+{
+    // set pass = 1
+    int pass = 1;
+    // repeat step 3 varying j form 0 to n-1-pas
+    do{
+        for ( int j = 0; j <= n-1-pass; j++) //atau <= n-
+        {
+            //If the element at index j is greater than
+            //j + 1, swap the two elements.
+            if(arr[j] > arr[j + 1]) {
+                int temp;
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+        // Increase pass by 1.
+        pass = pass + 1;
+    } while (pass <= n-1); //atau pass < n  
+
+}
+
 int main() {
 
 }
